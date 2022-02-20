@@ -37,7 +37,6 @@
           </button>
         </div>
       </div>
-   
     </div>
   </div>
 </template>
@@ -47,9 +46,7 @@
 
 export default {
   name: "Home",
-  components:{
-  
-  },
+  components: {},
   data: function () {
     return {
       pageDefault: 1,
@@ -76,21 +73,22 @@ export default {
       this.$store.dispatch("fetchUser", payload);
     },
     deleteUser(id) {
-      this.$store.dispatch("deleteUser", id)
-       .then(()=>{
-                 this.$swal({
-                icon: 'success',
-                title: 'SUCCES',
-                text: `SUCCES DELETE`,
-              })
-            })
-             .catch(() =>{
-              this.$swal({
-                icon: 'error',
-                title: 'Oops...',
-                text: "ERROR",
-              })
-            })
+      this.$store
+        .dispatch("deleteUser", id)
+        .then(() => {
+          this.$swal({
+            icon: "success",
+            title: "SUCCES",
+            text: `SUCCES DELETE`,
+          });
+        })
+        .catch(() => {
+          this.$swal({
+            icon: "error",
+            title: "Oops...",
+            text: "ERROR",
+          });
+        });
     },
     editUserId(id) {
       this.$store.dispatch("editUserId", id).then(() => {

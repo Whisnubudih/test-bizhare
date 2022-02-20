@@ -22,6 +22,13 @@
 1.cd project-bizhare
 2.npm run serve
 3.open App/Web
+4. email & password for login
+email : admin1@gmail.com
+password: admin123
+
+because I took data from someone else's third party API so I can't add, edit and delete data, but because I made this feature on this website, you can match the response status success in inspect > console and the response status succes on the third party api web
+
+API URL: https://reqres.in/
 ```
 
 ### Link github
